@@ -5,7 +5,7 @@ const router = express.Router();
 const path = require("path");
 
 // Define your routes here
-router.get("/", (req, res) => res.send("Hello World!"));
+router.get("/", (req, res) => res.send("Welcome to Main page with Hello World!"));
 
 router.get("/Ronald", (req, res) => 
   res.send("<h1>Wellcome Ronald</h1>")
