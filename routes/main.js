@@ -7,12 +7,13 @@ const path = require("path");
 // Define your routes here
 router.get("/", (req, res) => res.send("Welcome to Main page with Hello World!"));
 
-router.get("/Ronald", (req, res) => 
-  res.send("<h1>Wellcome Ronald</h1>")
-);
+router.get("/welcome/:name", (req, res) => {
+  const userName = req.params.name; // extract 'name' from the URL
+  res.send(`<h2>Welcome ${userName}</h2>`);
+});
 
 router.get("/Jamima", (req, res) => 
-  res.send("<h2>Welcome Jamima</h2>")
+  res.send("<h2>Welcome Jamima</h2><p>Writing a paragraph about jamima in p tag</p>")
 );
 
 router.get("/date", (req, res) => {
