@@ -32,7 +32,7 @@ router.get("/chain",
   }
 );
 //after adding html file
-router.get("/a", (req, res) => {
+router.get("/file", (req, res) => {
   const filePath = path.join(__dirname, "../a.html"); // Since routes/main.js is one folder deeper
   res.sendFile(filePath);
 });
